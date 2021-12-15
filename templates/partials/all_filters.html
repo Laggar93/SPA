@@ -1,0 +1,30 @@
+<form action="" method="GET" enctype="multipart/form-data">
+    <label for="column">Выбрать колонку:</label>
+
+    <select name="column" id="column">
+        <option value="default">----------</option>
+        <option value="name">Название</option>
+        <option value="count">Количество</option>
+        <option value="distance">Расстояние</option>
+    </select>
+
+
+    <label for="condition">Выбрать условие:</label>
+
+    <select name="condition" id="condition">
+        <option value="default">----------</option>
+        <option value="greater">больше</option>
+        <option value="less">меньше</option>
+        <option value="equal">равно</option>
+        <option value="contains">содержит</option>
+    </select>
+<input type="text" name='value' placeholder="Введите значение...">
+{% if messages %}
+    {% for message in messages %}
+        {{ message }}
+    {% endfor %}
+{% endif %}
+    <button>
+        submit
+    </button>
+</form>
